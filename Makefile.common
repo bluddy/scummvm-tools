@@ -71,7 +71,8 @@ UTILS := \
 	sound/adpcm.o \
 	sound/audiostream.o \
 	sound/voc.o \
-	sound/wave.o
+	sound/wave.o \
+	sound/mp3_header.o
 
 bundle_name = ScummVM\ Tools.app
 bundle: scummvm-tools$(EXEEXT)
@@ -210,6 +211,7 @@ tools_OBJS := \
 	engines/kyra/kyra_ins.o \
 	engines/kyra/kyra_pak.o \
 	compress.o \
+	add_header.o \
 	tool.o \
 	tools.o \
 	version.o \

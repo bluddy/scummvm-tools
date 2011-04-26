@@ -39,6 +39,7 @@
 #include "engines/tinsel/compress_tinsel.h"
 #include "engines/touche/compress_touche.h"
 #include "engines/tucker/compress_tucker.h"
+#include "add_header.h"
 
 #ifdef USE_PNG
 #include "encode_dxa.h"
@@ -74,6 +75,8 @@ Tools::Tools() {
 	_tools.push_back(new CompressTinsel());
 	_tools.push_back(new CompressTouche());
 	_tools.push_back(new CompressTucker());
+
+	_tools.push_back(new AddMp3Header());
 
 #ifdef USE_PNG
 	_tools.push_back(new EncodeDXA());
